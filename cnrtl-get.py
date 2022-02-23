@@ -52,4 +52,4 @@ for l in string.ascii_lowercase:
 
 all_words='\n'.join('{}'.format(item) for item in dictionary)
 with open(os.path.join("cnrtl-dictionary.txt"), "w", encoding="utf8") as file:
-    file.write(all_words)
+    file.write(all_words) 
