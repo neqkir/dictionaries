@@ -33,15 +33,11 @@ def get_words_in_page( url ):
 base_url = "https://www.cnrtl.fr/portailindex/LEXI/TLFI/"
 
 for l in string.ascii_lowercase:
-
-
-    if l == "c":
-        break
     
     base_url_letter = base_url + l.upper()    
     dictionary += get_words_in_page( base_url_letter )
     
-    next_index = 7920
+    next_index = 0
 
     while True:
 
@@ -57,4 +53,3 @@ for l in string.ascii_lowercase:
 all_words='\n'.join('{}'.format(item) for item in dictionary)
 with open(os.path.join("cnrtl-dictionary.txt"), "w", encoding="utf8") as file:
     file.write(all_words)
-
